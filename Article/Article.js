@@ -139,12 +139,12 @@ const createArt = (artObj) => {
   const artPara1 = document.createElement('p');
   const artPara2 = document.createElement('p');
   const artPara3 = document.createElement('p');
-  const expBtn = document.createElement('span');
+  const expBtn = document.createElement('button');
 
 
   //set class names
-  art.classList.add('.article');
-  artDate.classList.add('.date');
+  art.classList.add('article');
+  artDate.classList.add('date');
   expBtn.classList.add('expandButton');
 
   //build tree
@@ -161,11 +161,12 @@ const createArt = (artObj) => {
   artPara1.textContent = artObj.firstParagraph;
   artPara2.textContent = artObj.secondParagraph;
   artPara3.textContent = artObj.thirdParagraph;
+  expBtn.textContent = 'Read More';
 
 
   //functionality
   expBtn.addEventListener('click', () => {
-    art.classList.toggle('.article-open');
+    art.classList.toggle('article-open');
   })
 
   return art;
